@@ -15,12 +15,15 @@ header div{
 
 }
 header .logo{
+    margin-left: 180px;
+    padding:20px ;
 
 }
 header .nav{
     position: absolute;
     top: 0;
     right: 0;
+    margin-right: 200px;
     
 }
 header .nav ul{
@@ -29,14 +32,18 @@ header .nav ul{
 }
 header .nav ul li{
     float: left;
-    padding: 10px;
+    padding-right: 40px;
+    padding-top: 10px;
 }
 header .nav ul li a{
     text-decoration: none;
     color: rgb(31, 30, 30);
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: bold;
 }
+
+
 header .nav ul li a:hover{
-    
+    color:#7f97ff
 }
