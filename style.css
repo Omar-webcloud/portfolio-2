@@ -157,3 +157,10 @@ header .nav ul li a:hover{
     color: rgba(0, 0, 0, 0.6);
     margin: 0 auto;
 }
+.service{
+    width: 80%;
+    margin: 0 auto;
+}
+.ser1, .ser2{
+    width: 100;
+}
