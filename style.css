@@ -160,7 +160,56 @@ header .nav ul li a:hover{
 .service{
     width: 80%;
     margin: 0 auto;
+    padding-top: 45px;
+}
+.ser2{
+    padding-top: 30px;
 }
 .ser1, .ser2{
     width: 100;
+    overflow: hidden;
+}
+.ser1 div , .ser2 div{
+    width: 32%;
+    float: left;
+    padding: 5px;
+    margin: 0 auto;
+}
+.service i{
+    font-size: 45px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.service h1{
+    color: rgba(0, 0, 0, 0.9);
+}
+.service p{
+    color: rgba(0, 0, 0, 0.6);
+}
+.ser1 div:hover{
+    background-color: #ffffff;
+    
+
+}
+.ser2 div:hover{
+    background-color: #ffffff;
+    
+    
+}
+.ser1 div:hover i{
+    color: #8293ff;
+}
+.ser2 div:hover i{
+    color: #8293ff;
+}
+.ser1 div:hover h1{
+    color: #8293ff;}
+.ser2 div:hover h1{
+    color: #8293ff;
+}
+
+.ser1 div:hover p{
+    color: #8293ff;
+}
+.ser2 div:hover p{
+    color: #8293ff;
 }
