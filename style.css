@@ -1,12 +1,12 @@
 *{
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
 body{
-    margin: 0;
-    padding: 0;
     font-family: 'Arial', sans-serif;
     box-sizing: border-box;
     line-height: 1.6;
@@ -550,17 +550,38 @@ footer p{
         font-size: 3rem;
     }
 }
-@media (min-width:769px) and (max-width:1199px){
-    header{
-        height: 55px;
+/* Target Mobile Devices */
+@media (max-width: 768px) {
+    
+    /* 1. Fix Blank Space on Right */
+    html, body {
+        overflow-x: hidden; /* Stops horizontal scrolling */
+        max-width: 100%;
     }
-    header .logo img{
-        height: 28px;
+
+    /* 2. Fix Hamburger Menu (Row to Column) */
+    header .nav ul {
+        display: flex;
+        flex-direction: column; /* Forces vertical stacking */
+        position: absolute;     /* Detaches from header bar */
+        top: 100%;              /* Pushes it right below the header */
+        right: 0;
+        width: 100%;            /* full width menu */
+        background-color: #0d0d0d; /* Match your theme color */
+        padding: 20px 0;
+        z-index: 1000;          /* Ensures it sits on top of other content */
     }
-    header .nav ul li a{
-        font-size: 12px;
+
+    /* Reset margins for vertical layout */
+    header .nav ul li {
+        margin-left: 0;         /* Remove the sideways margin */
+        margin-bottom: 20px;    /* Add spacing between items */
+        text-align: center;     /* Centers the text */
+        display: block;
     }
-    header .nav ul li{
-        margin-left: 15px;
+    
+    /* Adjust link size for mobile if needed */
+    header .nav ul li a {
+        font-size: 18px;        /* Larger text is easier to tap */
     }
 }
