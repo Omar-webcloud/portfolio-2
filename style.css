@@ -1,8 +1,12 @@
 *{
   margin: 0;
   padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
+  box-sizing: border-box; 
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 
@@ -343,171 +347,101 @@ margin-right: -170px;
 
 
 @media (max-width:768px){
-    header{
-        width: 100%;
-        height: auto;
-        display: block;
+    /* Header & Nav */
+    header {
         position: relative;
+        padding: 0 20px; 
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    header .logo{
-        margin-left: 30px;
-        padding: 10px;
-
+    header .logo {
+        padding: 0;
+        margin: 0;
     }
-    .checkbtn{
+    .checkbtn {
         display: block;
-        position: absolute;
-        left: 5%;
-        top: 10px;
-        float: none;
-        line-height: 1;
-        margin-right: 0;
+        cursor: pointer;
+        font-size: 30px;
+        color: #333;
+        margin-right: 0; 
+        float: none;     
     }
-
-    header .nav ul{
+    header .nav {
+      
+        flex-grow: 0; 
+    }
+    header .nav ul {
         position: fixed;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background: #f9f9ff;
-        top: 40px;
-        left: -200%;
-        transition: all .1s;
-
+        top: 60px; 
+        left: -100vw; 
+        text-align: center;
+        transition: all 0.5s;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        z-index: 99;
+        margin: 0;
+        padding: 0;
     }
-    header .nav ul li{
-        line-height: 20px;
-        clear: both;
-        margin-top: 15px;
+    header .nav ul li {
+        display: block;
+        margin: 20px 0; 
+        width: 100%;
     }
-
-    #check:checked ~ ul{
+    header .nav ul li a {
+        font-size: 20px;
+        color: #333;
+        display: block; 
+        padding: 10px;
+    }
+    header .nav ul li a:hover, header .nav ul li a.active {
+        color: #7f97ff;
+    }
+    #check:checked ~ ul {
         left: 0;
     }
 
-    .section1{
-        width: 100%;
-        height: auto;
-        display: block;
-        padding: 50px 5%;
-    }
-    .half1{
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .half1 h3{
-        font-size: 15px;
-    }
-    .half1 h1{
-        font-size: 30px;
-    }
-    .half1 p{
-        font-size: 16px;
-        line-height: 1.6;
-        color: #666;
-    }
-    .half2 img{
-        max-width: 70%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
-    .section2{
-        display: block;
-        width: 100%;
-        height: auto;
-        padding: 50px 5%;
-    }
-    .section2 div{
-        width: 100%;
-        text-align: center;
-    }
-    .section2 .img2 img{
-        max-width: 70%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
-    .text2{
-        padding: 20px;
-    }
-    .text2 h3{
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.8);
-    }
-    .text2 h1{
-        font-size: 30px;
-        color: rgba(0, 0, 0, 0.9);
-    }
-    .text2 p{
-        font-size: 16px;
-        color: rgba(0, 0, 0, 0.9);
-        line-height: 1.6;
-    }
-    .section3{
-        width: 100%;
-        height: auto;
-        padding: 50px 5%;
-    }
-    .firsttext > h1{
-        font-size: 30px;
-        color: rgba(0, 0, 0, 0.9);
-
-    }
-    .firsttext p{
-        width: 80%;
-    }
-    .ser1 div, .ser2 div{
-        clear: left;
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-    .section4{
-        width: 100%;
-        height: auto;
+    /* Layout Adjustments */
+    .section1, .section2, .section3, .section4, .section5 {
         padding: 50px 5%;
         display: block;
-    }
-    .section4 div{
-        width: 100%;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-    .section5{
-        width: 100%;
-        height: auto;
-        padding: 50px 5%;
-   
-
-
-}
-footer{
-    background: linear-gradient(135deg, #333 0%, #555 100%);
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-    max-width: 90%;
-    margin: 0 auto;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-}
-footer p{
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 300;
-}
-    .section5 .imgg div{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .section5 figure{
-        width: 100%;
         height: auto;
     }
     
+    /* Section 1 */
+    .half1, .half2 {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    .half2 { margin-top: 30px; }
+    .half2 img { margin: 0 auto; }
     
-
-   margin: 0;
-    font-size: 14px;
+    /* Section 2 */
+    .section2 div {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .section2 .img2 img { margin: 0 auto; }
+    
+    /* Section 3 */
+    .firsttext p { width: 90%; }
+    .service { grid-template-columns: 1fr; }
+    
+    /* Section 4 */
+    .section4 { flex-direction: column; }
+    .section4 div { width: 100%; margin: 20px 0; }
+    
+    /* Section 5 */
+    .section5 .imgg { grid-template-columns: 1fr; }
 }
 @media (min-width:1200px){
     .section1{
@@ -550,38 +484,20 @@ footer p{
         font-size: 3rem;
     }
 }
-/* Target Mobile Devices */
-@media (max-width: 768px) {
-    
-    /* 1. Fix Blank Space on Right */
-    html, body {
-        overflow-x: hidden; /* Stops horizontal scrolling */
-        max-width: 100%;
-    }
 
-    /* 2. Fix Hamburger Menu (Row to Column) */
-    header .nav ul {
-        display: flex;
-        flex-direction: column; /* Forces vertical stacking */
-        position: absolute;     /* Detaches from header bar */
-        top: 100%;              /* Pushes it right below the header */
-        right: 0;
-        width: 100%;            /* full width menu */
-        background-color: #0d0d0d; /* Match your theme color */
-        padding: 20px 0;
-        z-index: 1000;          /* Ensures it sits on top of other content */
-    }
-
-    /* Reset margins for vertical layout */
-    header .nav ul li {
-        margin-left: 0;         /* Remove the sideways margin */
-        margin-bottom: 20px;    /* Add spacing between items */
-        text-align: center;     /* Centers the text */
-        display: block;
-    }
-    
-    /* Adjust link size for mobile if needed */
-    header .nav ul li a {
-        font-size: 18px;        /* Larger text is easier to tap */
-    }
+/* Footer */
+footer{
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    max-width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
+footer p{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
