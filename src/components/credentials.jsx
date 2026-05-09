@@ -5,19 +5,19 @@ import { motion } from "framer-motion"
 export function Credentials() {
   const skillGroups = [
     { 
-      title: "Core Stack", 
+      title: "WordPress Core", 
       icon: <Layers className="w-5 h-5" />, 
-      items: ["Next.js", "React", "JavaScript", "TypeScript", "Tailwind CSS", "PHP"] 
+      items: ["WordPress", "Elementor", "Theme Development", "Customization", "WooCommerce", "PHP"] 
     },
     { 
-      title: "Backend & Data", 
+      title: "Frontend & UI", 
       icon: <Code2 className="w-5 h-5" />, 
-      items: ["Node.js", "Express", "MongoDB", "Firebase"] 
+      items: ["HTML/CSS", "JavaScript", "React", "Tailwind CSS", "Figma"] 
     },
     { 
-      title: "Tools & Platforms", 
+      title: "Tools & Optimization", 
       icon: <Wrench className="w-5 h-5" />, 
-      items: ["Git/GitHub", "Vite", "npm", "DevTools", "Figma", "Notion", "Wordpress", "Elementor", "SCRUM", "Jest"] 
+      items: ["Git/GitHub", "ACF", "Cpanel", "SEO", "Optimization", "DevTools"] 
     }
   ]
 

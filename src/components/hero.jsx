@@ -50,7 +50,7 @@ export function Hero() {
             
             <div className="max-w-md hidden sm:block space-y-6">
               <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                A showcase of my recent work focusing on clean code, modern stacks, and user-centric designs.
+                A showcase of my recent work focusing on custom WordPress themes, Elementor designs, and tailored web solutions.
               </p>
               
               <div className="flex flex-col gap-4">

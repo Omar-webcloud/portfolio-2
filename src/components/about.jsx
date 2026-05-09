@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Globe, Mail, MailOpen } from "lucide-react"
 export function About({ onConnect }) {
-  const ROLES = ["Frontend Developer", "Web Developer", "WordPress Developer", "Full-Stack Developer"];
+  const ROLES = ["WordPress Developer", "Elementor Expert", "Theme Developer", "WordPress Customizer"];
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export function About({ onConnect }) {
           MOHAMMAD OMAR
         </h1>
         <h2 className="text-[10px] sm:text-xs md:text-base mt-1 sm:mt-2 font-mono text-foreground/50 uppercase tracking-[0.4em] font-semibold transition-colors duration-500 text-left ml-1">
-          Web Developer
+          WordPress Expert
         </h2>
       </div>
       
@@ -64,7 +64,7 @@ export function About({ onConnect }) {
              transition={{ duration: 0.6, delay: 0.3 }}
              className="text-[20px] sm:text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] font-medium leading-[1.3] md:leading-[1.15] mb-6 md:mb-8 font-sans tracking-tight text-background/90"
            >
-             Building <span className="font-bold text-background">high-performance, intuitive digital experiences</span> that elevate your brand and drive business growth.
+             Building <span className="font-bold text-background">custom WordPress themes and intuitive Elementor experiences</span> that elevate your brand and drive business growth.
            </motion.h2>
 
            <motion.div 
