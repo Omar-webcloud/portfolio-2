@@ -20,9 +20,12 @@ export function About({ onConnect }) {
         <h1 className="text-[24px] min-[375px]:text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-serif uppercase text-foreground/15 whitespace-nowrap leading-none tracking-[0.02em] font-bold transition-colors duration-500 text-left">
           MOHAMMAD OMAR
         </h1>
-        <h2 className="text-[10px] sm:text-xs md:text-base mt-1 sm:mt-2 font-mono text-foreground/50 uppercase tracking-[0.4em] font-semibold transition-colors duration-500 text-left ml-1">
-          WordPress Expert
-        </h2>
+        <div className="flex items-center gap-2 mt-1 sm:mt-2 ml-1">
+          <img src="/wordpress.png" alt="WordPress Logo" className="w-4 h-4 sm:w-5 sm:h-5 object-contain opacity-50 hover:opacity-100 transition-opacity duration-300" />
+          <h2 className="text-[10px] sm:text-xs md:text-base font-mono text-foreground/50 uppercase tracking-[0.4em] font-semibold transition-colors duration-500 text-left">
+            WordPress Expert
+          </h2>
+        </div>
       </div>
       
 
