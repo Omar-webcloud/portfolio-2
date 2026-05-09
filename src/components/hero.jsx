@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react"
 import { Monitor, Code2, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ProjectCard } from "./project-card"
-import { featuredProjects } from "../data/projects"
+import { featuredProjects, otherProjects } from "../data/projects"
 
 export function Hero() {
   const scrollRef = useRef(null)
@@ -119,7 +119,16 @@ export function Hero() {
 
           <div className="w-full lg:w-[50%] flex flex-col gap-8 sm:gap-16 pb-12 sm:pb-20">
             {featuredProjects.map((project, idx) => (
-              <ProjectCard key={idx} project={project} idx={idx} />
+              <ProjectCard key={`wp-${idx}`} project={project} idx={idx} />
+            ))}
+
+            <div className="pt-4 sm:pt-8 flex flex-col items-start w-full">
+              <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-foreground mb-2">Other Projects</h2>
+              <div className="h-[1px] w-full bg-border"></div>
+            </div>
+
+            {otherProjects.map((project, idx) => (
+              <ProjectCard key={`other-${idx}`} project={project} idx={featuredProjects.length + idx} />
             ))}
           </div>
         </div>
