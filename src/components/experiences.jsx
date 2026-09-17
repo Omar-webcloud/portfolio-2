@@ -47,7 +47,7 @@ function ExperienceItem({ experience }) {
               alt={`${experience.companyName} logo`}
               width={24}
               height={24}
-              className="rounded-full grayscale transition-[filter] duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] group-hover/experience:grayscale-0"
+              className="rounded-full grayscale transition-all duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] group-hover/experience:grayscale-0 group-hover/experience:scale-110"
               aria-hidden
             />
           ) : (
@@ -59,7 +59,7 @@ function ExperienceItem({ experience }) {
           <h3 className="text-xl/6 font-medium">
             {experience.companyWebsite ? (
               <a
-                className="link"
+                className="link text-foreground hover:text-emerald-500 transition-colors"
                 href={experience.companyWebsite}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,9 +83,9 @@ function ExperienceItem({ experience }) {
                 <dt className="sr-only">Employment status</dt>
                 <dd>
                   <span className="sr-only">Current</span>
-                  <span className="relative flex size-2.5 translate-x-px translate-y-px items-center justify-center">
-                    <span className="absolute inline-flex size-2.5 animate-ping rounded-full bg-info opacity-50" />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-info" />
+                  <span className="relative flex size-2.5 translate-x-px translate-y-px items-center justify-center" title="Active">
+                    <span className="absolute inline-flex size-2.5 animate-ping rounded-full bg-emerald-500 opacity-60" />
+                    <span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
                   </span>
                 </dd>
               </>
@@ -117,6 +117,7 @@ function ExperiencePositionItem({ position }) {
   return (
     <Collapsible
       defaultOpen={position.isExpanded}
+      className="group/pos transition-colors"
       trigger={({ open }) => (
         <>
           <div className="relative z-1 mb-1 flex items-start gap-3 text-base">
@@ -124,9 +125,11 @@ function ExperiencePositionItem({ position }) {
               <BriefcaseBusinessIcon />
             </IconTile>
 
-            <h4 className="flex-1 font-medium text-balance">{position.title}</h4>
+            <h4 className="flex-1 font-medium text-balance text-foreground group-hover/pos:text-indigo-600 dark:group-hover/pos:text-indigo-400 transition-colors">
+              {position.title}
+            </h4>
 
-            <div className="shrink-0 text-muted-foreground">
+            <div className="shrink-0 text-muted-foreground group-hover/pos:text-foreground">
               <ChevronsUpDownIcon
                 className={cn("size-4 transition-transform duration-200", open && "rotate-180")}
               />
@@ -155,7 +158,7 @@ function ExperiencePositionItem({ position }) {
                 <span className="font-mono">—</span>
                 {isOngoing ? (
                   <InfinityIcon
-                    className="size-4.5 translate-y-[0.5px]"
+                    className="size-4.5 translate-y-[0.5px] text-emerald-500"
                     aria-label="Present"
                     strokeWidth={1.5}
                   />
@@ -189,7 +192,7 @@ function ExperiencePositionItem({ position }) {
             {position.description.map((line, index) => (
               <li
                 key={index}
-                className="relative pl-4 text-sm text-muted-foreground before:absolute before:top-[0.6em] before:left-0 before:size-1 before:rounded-full before:bg-muted-foreground/50"
+                className="relative pl-4 text-sm text-muted-foreground before:absolute before:top-[0.6em] before:left-0 before:size-1 before:rounded-full before:bg-indigo-500/60"
               >
                 {line}
               </li>

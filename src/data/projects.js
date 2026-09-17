@@ -1,50 +1,174 @@
-export const featuredProjects = [
+export const PROJECTS = [
   {
     num: "01",
-    title: "REDO WP THEME",
-    description: "A fully functional, pixel-perfect custom WordPress theme ported from a static design, featuring responsive modern layouts.",
-    stack: ["WordPress", "Theme Development", "PHP", "CSS"],
-    link: "https://github.com/Omar-webcloud/WP-theme",
-    github: "https://github.com/Omar-webcloud/WP-theme",
-    type: "Theme Dev"
+    title: "AUREUM",
+    type: "AI Cafe Storefront",
+    description:
+      "A full-stack specialty coffee storefront and AI-powered cafe. Features an AI Barista chatbot for recommendations and order parsing, a live kitchen ticket rail, real-time analytics dashboard, and WhatsApp ordering integration.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Gemini AI", "Drizzle ORM", "WhatsApp API"],
+    website: "https://aureum-cafe.vercel.app/",
+    link: "https://aureum-cafe.vercel.app/",
+    github: "https://github.com/Omar-webcloud/aureum-cafe",
+    image: "/projects/Aureum-Cafe-Dashboard.png",
+    darkImage: "/projects/Aureum-Cafe-Dashboard.png",
   },
   {
     num: "02",
-    title: "BLOGGIN' PRO",
-    description: "Modern blogging platform with full user authentication, customized Elementor widgets and dynamic content.",
-    stack: ["WordPress", "Elementor Pro", "Custom Widgets"],
-    link: "https://bloggin-app-six.vercel.app/",
-    github: "https://github.com/Omar-webcloud/Bloggin-App",
-    type: "Platform"
-  }
-];
-
-export const otherProjects = [
+    title: "ORDO",
+    type: "Task Management API",
+    description:
+      "A minimalistic Task Management API built with a Node.js (Express) server and a Next.js frontend, designed for tracking, managing, and assigning tasks.",
+    stack: ["Node.js", "Express", "Next.js", "Tailwind CSS", "TypeScript", "React"],
+    website: "https://ordo-task-manager.vercel.app/",
+    link: "https://ordo-task-manager.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Ordo",
+    image: "/projects/ordo.png",
+    darkImage: "/projects/ordo.png",
+  },
   {
     num: "03",
-    title: "SYNTAXA",
-    description: "Interactive grammar web application for practicing sentences and improving writing skills through dynamic exercises.",
-    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    link: "https://syntaxa-ten.vercel.app/",
-    github: "https://github.com/Omar-webcloud/syntaxa",
-    type: "EdTech App"
+    title: "FABLE",
+    type: "E-book Platform",
+    description:
+      "Modern e-book sharing platform featuring an RBAC (Role-Based Access Control) system where readers can browse, bookmark, and purchase ebooks while writers publish and manage their personal catalogs.",
+    stack: ["Next.js", "Tailwind CSS", "Better Auth", "Stripe", "Framer Motion"],
+    website: "https://fable-umber.vercel.app/",
+    link: "https://fable-umber.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Fable",
+    image: "/projects/fable-light.png",
+    darkImage: "/projects/fable-dark.png",
   },
   {
     num: "04",
-    title: "PLASTITRACK",
-    description: "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
-    stack: ["Next.js", "Tailwind CSS", "TypeScript"],
-    link: "https://plasti-track.vercel.app/",
-    github: "https://github.com/Omar-webcloud/PlastiTrack",
-    type: "GreenTech"
+    title: "SALESPILOT - Dashboard",
+    type: "Analytics Dashboard",
+    description:
+      "A modern analytics dashboard with revenue tracking, sales funnel visualization, team performance metrics, product management, and a real-time Currency Converter API.",
+    stack: ["Next.js", "React", "Tailwind CSS", "API", "PostgreSQL", "Prisma"],
+    website: "https://sales-dashboard-omar.vercel.app/",
+    link: "https://sales-dashboard-omar.vercel.app/",
+    github: "https://github.com/omar-webcloud/Sales-CRM/",
+    image: "/projects/sales-light.png",
+    darkImage: "/projects/sales-dark.png",
   },
   {
     num: "05",
+    title: "NEXO Gadgets",
+    type: "E-commerce",
+    description:
+      "A Bangladeshi local gadget shop with WhatsApp integrated checkout with real products.",
+    stack: ["Next.js", "Tailwind CSS 4", "Zustand", "WhatsApp API"],
+    website: "https://nexo-gadgets.vercel.app/",
+    link: "https://nexo-gadgets.vercel.app/",
+    github: "https://github.com/Omar-webcloud/NEXO-gadgets",
+    image: "/projects/nexo-light.png",
+    darkImage: "/projects/nexo-dark.png",
+  },
+  {
+    num: "06",
+    title: "BLOGGIN'",
+    type: "Platform",
+    description:
+      "Modern blogging platform with full user authentication and post management capabilities.",
+    stack: ["TypeScript", "Next.js", "Firebase"],
+    website: "https://bloggin-app-six.vercel.app/",
+    link: "https://bloggin-app-six.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Bloggin-App",
+    image: "/projects/bloggin.png",
+    darkImage: "/projects/bloggin.png",
+  },
+  {
+    num: "07",
+    title: "MEDIQUEUE",
+    type: "EdTech Platform",
+    description:
+      "Tutor booking and educational queue management platform with real-time session scheduling, advanced filtering, and personalized dashboards for students and educators.",
+    stack: ["Next.js", "Tailwind CSS 4", "Shadcn UI", "React Day Picker"],
+    website: "https://medi-queue-smoky.vercel.app/",
+    link: "https://medi-queue-smoky.vercel.app/",
+    github: "https://github.com/Omar-webcloud/MediQueue",
+    image: "/projects/mediqueue.png",
+    darkImage: "/projects/mediqueue.png",
+  },
+  {
+    num: "08",
+    title: "PLASTITRACK",
+    type: "GreenTech",
+    description:
+      "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript"],
+    website: "https://plasti-track.vercel.app/",
+    link: "https://plasti-track.vercel.app/",
+    github: "https://github.com/Omar-webcloud/PlastiTrack",
+    image: "/projects/plastitrack-light.png",
+    darkImage: "/projects/plastitrack-dark.png",
+  },
+  {
+    num: "09",
+    title: "SYNTAXA",
+    type: "EdTech App",
+    description:
+      "Interactive grammar web application for practicing sentences and improving writing skills through dynamic exercises.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    website: "https://syntaxa-ten.vercel.app/",
+    link: "https://syntaxa-ten.vercel.app/",
+    github: "https://github.com/Omar-webcloud/syntaxa",
+    image: "/projects/syntaxa-light.png",
+    darkImage: "/projects/syntaxa-dark.png",
+  },
+  {
+    num: "10",
+    title: "SKILL SPHERE",
+    type: "E-learning",
+    description:
+      "Online learning platform for discovering and mastering new skills, featuring secure authentication, real-time course search, personalized profiles, and a modern hero slider.",
+    stack: ["Next.js", "Better Auth", "Tailwind CSS 4", "DaisyUI", "Swiper.js"],
+    website: "https://skill-sphere-omar.vercel.app/",
+    link: "https://skill-sphere-omar.vercel.app/",
+    github: "https://github.com/Omar-webcloud/SkillSphere",
+    image: "/projects/skillsphere.png",
+    darkImage: "/projects/skillsphere.png",
+  },
+  {
+    num: "11",
     title: "WEBCHRONICLES",
-    description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
+    type: "Data Visualization",
+    description:
+      "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
+    website: "https://web-chronicles.vercel.app/",
     link: "https://web-chronicles.vercel.app/",
     github: "https://github.com/Omar-webcloud/WebChronicles",
-    type: "Data Visualization"
-  }
-];
+    image: "/projects/webchronicles.png",
+    darkImage: "/projects/webchronicles.png",
+  },
+  {
+    num: "12",
+    title: "FRESH FARM",
+    type: "E-commerce",
+    description:
+      "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
+    stack: ["React", "JavaScript", "CSS"],
+    website: "https://fresh-farm-zeta.vercel.app/",
+    link: "https://fresh-farm-zeta.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Fresh-Farm",
+    image: "/projects/fresh-farm-light.png",
+    darkImage: "/projects/fresh-farm-dark.png",
+  },
+  {
+    num: "13",
+    title: "KINO-XPLORER",
+    type: "Search Tool",
+    description:
+      "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
+    stack: ["React", "API", "JavaScript"],
+    website: "https://kino-xplorer.vercel.app/",
+    link: "https://kino-xplorer.vercel.app/",
+    github: "https://github.com/Omar-webcloud/movie-explorer",
+    image: "/projects/kino-xplorer.png",
+    darkImage: "/projects/kino-xplorer.png",
+  },
+]
+
+export const featuredProjects = PROJECTS.slice(0, 4)
+export const otherProjects = PROJECTS.slice(4)

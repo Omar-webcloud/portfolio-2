@@ -3,8 +3,10 @@ import {
   CheckIcon,
   CodeXmlIcon,
   CopyIcon,
+  GlobeIcon,
   LinkIcon,
   MapPinIcon,
+  SparklesIcon,
 } from "lucide-react"
 
 import { USER } from "@/data/user"
@@ -27,7 +29,7 @@ export function Overview() {
             {USER.jobs[0].title} <span aria-label="at">@</span>
             <a
               href="#experience-webermelon"
-              className="link ml-0.5 font-medium"
+              className="link ml-0.5 font-medium text-foreground hover:text-emerald-500"
             >
               {USER.jobs[0].company}
             </a>
@@ -44,7 +46,7 @@ export function Overview() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Location: ${USER.address}`}
-              className="link"
+              className="link hover:text-cyan-500"
             >
               {USER.address}
             </a>
@@ -65,7 +67,7 @@ export function Overview() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Personal website: ${USER.website}`}
-              className="link"
+              className="link hover:text-indigo-500 truncate block max-w-full"
             >
               {USER.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}
             </a>
@@ -74,10 +76,10 @@ export function Overview() {
 
         <IntroItem>
           <IconTile>
-            <MapPinIcon />
+            <SparklesIcon className="text-amber-500" />
           </IconTile>
-          <IntroItemContent className="text-muted-foreground">
-            Available for freelance &amp; remote work
+          <IntroItemContent className="text-muted-foreground text-xs sm:text-sm">
+            {USER.availability.status} &amp; freelance
           </IntroItemContent>
         </IntroItem>
       </PanelContent>
@@ -93,14 +95,14 @@ export function Overview() {
 export function IntroItem({ className, ...props }) {
   return (
     <div
-      className={cn("flex items-center gap-4 font-mono text-sm", className)}
+      className={cn("group/intro flex items-center gap-3 sm:gap-4 font-mono text-sm min-w-0", className)}
       {...props}
     />
   )
 }
 
 export function IntroItemContent({ className, ...props }) {
-  return <p className={cn("text-balance", className)} {...props} />
+  return <p className={cn("text-balance min-w-0 truncate", className)} {...props} />
 }
 
 function EmailItem({ email }) {
@@ -121,17 +123,24 @@ function EmailItem({ email }) {
       <IconTile>
         {copied ? <CheckIcon className="text-success" /> : <CopyIcon />}
       </IconTile>
-      <IntroItemContent>
+      <IntroItemContent className="flex items-center gap-2">
         <button
           type="button"
           onClick={copy}
-          className="cursor-copy text-left underline decoration-transparent decoration-1 underline-offset-3 transition-colors hover:decoration-current"
+          className="cursor-copy text-left underline decoration-transparent decoration-1 underline-offset-3 transition-colors hover:decoration-emerald-500 hover:text-emerald-500 truncate"
           aria-label={`Copy email address ${email}`}
         >
           {email}
         </button>
-        <span className="sr-only" role="status">
-          {copied ? "Email copied to clipboard" : ""}
+        <span
+          className={cn(
+            "text-[10px] uppercase font-mono px-1.5 py-0.5 rounded transition-all",
+            copied
+              ? "bg-emerald-500/10 text-emerald-500 font-semibold"
+              : "text-muted-foreground/60"
+          )}
+        >
+          {copied ? "copied!" : "click to copy"}
         </span>
       </IntroItemContent>
     </IntroItem>
@@ -160,14 +169,15 @@ function CurrentLocalTimeItem({ timeZone }) {
           strokeLinecap="round"
           strokeLinejoin="round"
           aria-hidden
+          className="group-hover/intro:text-sky-500 transition-colors"
         >
           <circle cx="12" cy="12" r="10" />
           <path d={clockHandsPath(clock.hour, clock.minute)} />
         </svg>
       </IconTile>
       <IntroItemContent>
-        <span className="tabular-nums">{clock.time}</span>
-        <span className="text-muted-foreground"> {clock.diff}</span>
+        <span className="tabular-nums font-semibold">{clock.time}</span>
+        <span className="text-muted-foreground text-xs"> {clock.diff}</span>
       </IntroItemContent>
     </IntroItem>
   )

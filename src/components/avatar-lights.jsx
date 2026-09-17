@@ -1,14 +1,13 @@
 import { cn } from "@/lib/utils"
 
 /**
- * The headshot. "Lights off" desaturates the photo, "lights on" brings it back
- * with a warm key light — click the avatar (or press L) to flip the switch.
+ * The headshot with responsive sizing for mobile and desktop.
  */
 export function AvatarLights({ lightsOn = false, className }) {
   return (
     <div
       className={cn(
-        "pointer-events-none relative size-30 rounded-full min-[24rem]:size-32 sm:size-40",
+        "pointer-events-none relative size-20 min-[22rem]:size-24 sm:size-36 md:size-40 rounded-full",
         className
       )}
     >
@@ -21,23 +20,23 @@ export function AvatarLights({ lightsOn = false, className }) {
         aria-hidden
       />
 
-      <div className="absolute inset-0 overflow-hidden rounded-full">
+      <div className="absolute inset-0 overflow-hidden rounded-full bg-muted/40">
         <img
-          src="/images/omar-headshot.jpg"
+          src="/images/omar.png"
           alt="Mohammad Omar"
           fetchPriority="high"
           className={cn(
-            "size-full rounded-full object-cover transition-[filter,transform] duration-[1200ms] ease-[cubic-bezier(0.42,0,0.58,1)]",
+            "size-full rounded-full object-cover object-center transition-[filter,transform] duration-[1200ms] ease-[cubic-bezier(0.42,0,0.58,1)]",
             lightsOn
               ? "scale-100 grayscale-0 contrast-100"
-              : "scale-[1.01] grayscale-[0.9] contrast-[0.92]"
+              : "scale-[1.01] grayscale-[0.85] contrast-[0.95]"
           )}
         />
       </div>
 
       <div
         className={cn(
-          "absolute inset-0 rounded-full bg-foreground/15 mix-blend-multiply transition-opacity duration-[1200ms] ease-[cubic-bezier(0.42,0,0.58,1)]",
+          "absolute inset-0 rounded-full bg-foreground/10 mix-blend-multiply transition-opacity duration-[1200ms] ease-[cubic-bezier(0.42,0,0.58,1)]",
           lightsOn ? "opacity-0" : "opacity-100"
         )}
         aria-hidden

@@ -21,13 +21,15 @@ export function Education() {
 
       <ul className="py-4 pr-2 pl-4">
         {EDUCATION.map((item) => (
-          <li key={item.id} className="flex items-start gap-4">
-            <IconTile>
+          <li key={item.id} className="group/edu flex items-start gap-4">
+            <IconTile className="group-hover/edu:border-indigo-500/40 group-hover/edu:bg-indigo-500/10 group-hover/edu:text-indigo-500">
               <GraduationCapIcon />
             </IconTile>
 
             <div className="min-w-0">
-              <h3 className="font-medium text-balance">{item.title}</h3>
+              <h3 className="font-medium text-balance text-foreground group-hover/edu:text-indigo-600 dark:group-hover/edu:text-indigo-400 transition-colors">
+                {item.title}
+              </h3>
               <p className="text-sm text-foreground/80">{item.subtitle}</p>
               <p className="mt-1 font-mono text-xs text-muted-foreground uppercase">
                 {item.organization}

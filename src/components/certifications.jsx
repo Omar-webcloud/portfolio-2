@@ -27,20 +27,22 @@ export function Certifications() {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/cert flex items-center gap-3 rounded-md border bg-zinc-50/60 p-3 transition-colors hover:bg-accent-muted dark:bg-zinc-900/60"
+              className="group/cert flex items-center gap-3 rounded-lg border border-border bg-zinc-50/60 p-3 transition-all duration-200 hover:border-amber-500/40 hover:bg-amber-500/5 hover:shadow-xs dark:bg-zinc-900/60"
             >
               <IconTile>
                 <AwardIcon />
               </IconTile>
 
               <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium">{cert.title}</p>
+                <p className="truncate text-sm font-medium text-foreground group-hover/cert:text-amber-600 dark:group-hover/cert:text-amber-400 transition-colors">
+                  {cert.title}
+                </p>
                 <p className="font-mono text-xs text-muted-foreground uppercase">
                   {cert.issuer}
                 </p>
               </div>
 
-              <ExternalLinkIcon className="size-3.5 shrink-0 text-muted-foreground opacity-0 transition-opacity group-hover/cert:opacity-100" />
+              <ExternalLinkIcon className="size-3.5 shrink-0 text-muted-foreground transition-all duration-200 group-hover/cert:text-amber-500 group-hover/cert:translate-x-0.5" />
             </a>
           </li>
         ))}

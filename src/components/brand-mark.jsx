@@ -1,30 +1,22 @@
 import { cn } from "@/lib/utils"
 
-/** "OM" monogram — a circle wrapped around an M. */
+/** Two-line clean wordmark for Mohammad Omar (no acronyms) */
 export function BrandMark({ className, ...props }) {
   return (
-    <svg
-      viewBox="0 0 28 28"
-      aria-hidden
-      className={cn("h-6 w-auto shrink-0", className)}
+    <div
+      className={cn(
+        "group/brandmark flex flex-col font-mono text-[9px] sm:text-[10px] leading-[1.15] font-bold tracking-widest uppercase transition-colors duration-200 select-none",
+        className
+      )}
       {...props}
     >
-      <rect
-        x="0.5"
-        y="0.5"
-        width="27"
-        height="27"
-        rx="7.5"
-        className="fill-foreground/[0.04] stroke-foreground/20"
-      />
-      <circle cx="14" cy="14" r="7.25" className="stroke-foreground" strokeWidth="1.6" />
-      <path
-        d="M10.4 17.6V10.4L14 14.3L17.6 10.4V17.6"
-        className="stroke-foreground"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+      <span className="text-muted-foreground/90 group-hover/brandmark:text-emerald-500 transition-colors">
+        Mohammad
+      </span>
+      <span className="text-foreground flex items-center gap-1 font-extrabold group-hover/brandmark:text-emerald-500 transition-colors">
+        Omar
+        <span className="size-1 rounded-full bg-emerald-500 inline-block" />
+      </span>
+    </div>
   )
 }
